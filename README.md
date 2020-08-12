@@ -4,24 +4,24 @@
 ## Task Description
 
 You will be required to produce code to process and transform some sample data.
-The sample data is in the file called `data.csv`.
-Certain rows contain missing entries which you will need to handle appropriately.
+The sample data is in the file called `data.json`.
 There are also some duplicate rows.
 
 The produced code should be able to acheive the following
-1. compute the rank of each user's `user_score` within each age group and output the rank in a new column called `sub_group_rank`
-2. process the column `widget_list` (list of JSON) by
+1. remove duplicates over the columns `id` and `createdAt`
+2. compute the rank of each user's `user_score` within each age group and output the rank in a new column called `sub_group_rank`
+3. process the column `widget_list` by
     1. flattening the list items i.e. each item in the list is put into its own row
     2. extracting the values in the JSON elements into their own columns called `widget_name` and `widget_amount`
-3. remove duplicates over the columns `id` and `createdAt`
-4. anonymize the column `email` and output the anonymized version in a new column `email_anon`.
+4. remove duplicates over the columns `id` and `createdAt`
+5. anonymize the column `email` and output the anonymized version in a new column `email_anon`.
 This column `email_anon` should have the following properties.
     1. machine learning training and inference can be done on the anonyized values
-    2. given an anonymized value, the original value can be recovered
-5. 
-6. write the processed data into separate csv file(s)
+    2. given an anonymized value the original value can be recovered
+6. create a new table that is an inverted index that gives, for each country in `location,` which `id`s are located in that country
+7. write the processed tables/data into separate `JSON` file(s)
 
-You will be evaluated on correctness, scalability and maintainability of your code.
+Your code will be evaluated for correctness, scalability and maintainability.
 
 ## Guidelines
 

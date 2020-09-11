@@ -13,13 +13,13 @@ The produced code should be able to acheive the following
 3. process the column `widget_list` by
     1. flattening the list items i.e. each item in the list is put into its own row
     2. extracting the values in the JSON elements into their own columns called `widget_name` and `widget_amount`
-4. remove duplicates over the columns `id` and `createdAt`
-5. anonymize the column `email` and output the anonymized version in a new column `email_anon`.
+4. anonymize the column `email` and output the anonymized version in a new column `email_anon`.
 This column `email_anon` should have the following properties.
     1. machine learning training and inference can be done on the anonyized values
     2. given an anonymized value the original value can be recovered
-6. create a new table that is an inverted index that gives, for each country in `location,` which `id`s are located in that country
-7. write the processed tables/data into separate `JSON` file(s)
+5. create a new table that is an inverted index that gives, for each country in `location,` which `id`s are located in that country
+6. write the processed tables/data into separate `parquet` file(s).
+Exactly how the files/tables are organized is not as important as having all the data present.
 
 Your code will be evaluated for correctness, scalability and maintainability.
 
@@ -27,6 +27,7 @@ Your code will be evaluated for correctness, scalability and maintainability.
 
 1. You are allowed to use any language and any libraries you wish.
 However, you should be able to justify your technical decisions.
+Feel free to use any resources available to you.
 2. Fork the github repo [ here ](https://github.com/Mistplay/DataEngineerTakeHomeChallenge).
 3. The challenge should not require more than a couple of hours to complete.
 We don't want you to be spending too much time on it.

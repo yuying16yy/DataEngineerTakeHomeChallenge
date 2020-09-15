@@ -15,8 +15,7 @@ The produced code should be able to acheive the following
     2. extracting the values in the JSON elements into their own columns called `widget_name` and `widget_amount`
 4. anonymize the column `email` and output the anonymized version in a new column `email_anon`.
 This column `email_anon` should have the following properties.
-    1. machine learning training and inference can be done on the anonyized values
-    2. given an anonymized value the original value can be recovered
+    1. given an anonymized value the original value can be recovered
 5. create a new table that is an inverted index that gives, for each country in `location,` which `id`s are located in that country
 6. write the processed tables/data into separate `parquet` file(s).
 Exactly how the files/tables are organized is not as important as having all the data present.

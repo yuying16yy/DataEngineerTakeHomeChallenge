@@ -27,7 +27,7 @@ Your code will be evaluated for correctness, scalability and maintainability.
 1. You are allowed to use any language and any libraries you wish.
 However, you should be able to justify your technical decisions.
 Feel free to use any resources available to you.
-2. Fork the github repo [ here ](https://github.com/Mistplay/DataEngineerTakeHomeChallenge).
+2. Fork the github repo [ here ](https://github.com/Mistplay/DataEngineerTakeHomeChallenge). Once you've completed the challenge, push all code and other files to Github. Submit the link to your Github repo.
 3. The challenge should not require more than a couple of hours to complete.
 We don't want you to be spending too much time on it.
 This being said, your code should be organized and well-designed within reason.

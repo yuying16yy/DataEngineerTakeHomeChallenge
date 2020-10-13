@@ -8,7 +8,7 @@ The sample data is in the file called `data.json`.
 There are also some duplicate rows.
 
 The produced code should be able to acheive the following
-1. remove duplicates over the columns `id` and `createdAt`
+1. remove duplicates over the columns `id` and `created_at`
 2. compute the rank of each user's `user_score` within each age group and output the rank in a new column called `sub_group_rank`
 3. process the column `widget_list` by
     1. flattening the list items i.e. each item in the list is put into its own row

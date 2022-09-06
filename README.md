@@ -7,7 +7,7 @@ You will be required to produce code to process and transform some sample data.
 The sample data is in the file called `data.json`.
 There are also some duplicate rows.
 
-The produced code should be able to acheive the following
+The produced code should be able to achieve the following
 1. remove duplicates over the columns `id` and `created_at` (considered simultaneously)
 2. compute the rank of each user's `user_score` within each age group and output the rank in a new column called `sub_group_rank`
 3. process the column `widget_list` by

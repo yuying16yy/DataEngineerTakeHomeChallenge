@@ -21,19 +21,20 @@ Your job is to transform and store the data, meeting the following requirements:
 any rows with the same (`id`, `created_at`) tuple are considered identical (regardless of the value of other columns)
 and all but 1 should be discarded.  (You can decide which ones to discard)
 3. Output the number of rows removed.
-4. Calculate the "rank" of the user in their `age_group` based on their `user_score` value.  Bigger 'user_score'
-is better.  So the user in the age group with the highest score is rank 1, second highest rank 2, and so on.
+4. Calculate the "rank" of the user in their `age_group` based on their `user_score` value.  Bigger `user_score`
+is better. The user in the age group with the highest score is rank 1, second highest rank 2, and so on.
 Store their rank within the dataset in a column called `age_group_rank`
 5. Output the `id`, `email` and `age_group` for the top user (rank = 1) for each age group, in age group order (ascending)
 6. Each record has an array of 0 or more dictionary/JSON objects in the `widget_list` column representing data about widgets
 used in the activity.   Each element in this array looks like `{"name":"xxxx", "amount": 0.yyyy}`.  For each row,
-'flatten' the `widget_list` resulting in one row for each element of the `widget_list` in the `widget_list` column.  So if you
+'flatten' the `widget_list` resulting in one row for each element of the array in the `widget_list` column.  So if you
 have a record that has two elements in the `widget_list` column (call them A and B), the result should be two rows that are 
 identical to the original with a single dictionary/JSON element in the `widget_list` column, with values A and B respectively.
+If a row has an empty array or null value in `widget_list` column, it remains as is with no additional rows.
 7. Output the new total number of rows.
 8. Add two more columns to the data set, called `widget_name` and `widget_amount`.  Then, for each row in the expanded data set,
 extract the value of `name` and `amount` from the value in `widget_list` and put in the `widget_name` and `widget_amount` columns
-respectively.
+respectively.  Figure out what to do if you have any rows with an empty or null `widget_list` value.
 9. Anonymize the `email` column in place such that if needed, the anonymization could be reversed (if one had specific information).
 10. Store the resulting table.  For now, write the resulting table to a `parquet` file on the local filesystem, but
 make it relatively simple to change where the data is stored.
